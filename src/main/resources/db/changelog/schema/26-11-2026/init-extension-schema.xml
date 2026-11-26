@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-5.0.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <!-- Extension PostgreSQL: pgvector cho cột embedding -->
+    <changeSet id="1795681000000-1" author="minhdat">
+        <sql>CREATE EXTENSION IF NOT EXISTS vector;</sql>
+        <rollback>
+            <sql>DROP EXTENSION IF EXISTS vector;</sql>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
