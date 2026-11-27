@@ -1,0 +1,17 @@
+job_families:
+  - code: marketing
+    name_vi: Marketing
+    name_en: Marketing
+    status: ACTIVE
+    sort_order: 20
+    description_vi: >-
+      Tiếp thị, quảng cáo, thương hiệu, truyền thông và thương mại điện tử.
+
+  - code: accounting-finance
+    name_vi: Kế toán – Tài chính
+    name_en: Accounting & Finance
+    status: DRAFT
+    sort_order: 30
+    description_vi: >-
+      Kế toán, kiểm toán, thuế và tài chính doanh nghiệp.
+      Hiện chỉ có dữ liệu mẫu tối thiểu để kiểm chứng mô hình chứng chỉ bắt buộc theo luật.

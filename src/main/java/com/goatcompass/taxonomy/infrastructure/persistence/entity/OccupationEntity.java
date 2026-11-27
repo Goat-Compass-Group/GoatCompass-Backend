@@ -67,4 +67,9 @@ public class OccupationEntity extends CodedEntity {
         this.status = Status.DEPRECATED;
         this.replacedBy = replacement;
     }
+
+    public void updateStatus(Status status, OccupationEntity replacement) {
+        this.status = status;
+        this.replacedBy = status == Status.DEPRECATED ? replacement : null;
+    }
 }

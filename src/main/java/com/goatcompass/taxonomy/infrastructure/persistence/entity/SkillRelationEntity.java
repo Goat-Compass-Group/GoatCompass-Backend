@@ -22,6 +22,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "skill_relation",
@@ -33,6 +34,7 @@ public class SkillRelationEntity {
     private Id id;
     /** Mức chuyển đổi (0, 1], chỉ dùng cho RELATED. */
     @Column(precision = 3, scale = 2)
+    @Setter
     private BigDecimal weight;
 
     @MapsId("fromSkillId")

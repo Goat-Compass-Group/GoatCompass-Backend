@@ -1,0 +1,58 @@
+occupations:
+  - code: general-accountant
+    name_vi: Kế toán tổng hợp
+    name_en: General Accountant
+    job_families: [accounting-finance]
+    description_vi: Hạch toán, tổng hợp sổ sách, kê khai thuế và lập báo cáo tài chính cho doanh nghiệp.
+    aliases:
+      vi: [nhân viên kế toán, kế toán viên, kế toán doanh nghiệp, kế toán nội bộ]
+      en: [accountant, staff accountant, accounting executive]
+    external_refs:
+      - { scheme: ISCO08, code: "2411", match: BROAD }
+    skills:
+      essential:
+        - { skill: financial-accounting, level: 3 }
+        - { skill: vietnamese-accounting-standards, level: 3 }
+        - { skill: tax-accounting, level: 2 }
+        - { skill: financial-reporting, level: 2 }
+        - { skill: accounting-software, level: 2 }
+        - { skill: spreadsheet-excel, level: 3 }
+      optional:
+        - { skill: ifrs, level: 1 }
+        - { skill: english, level: 2 }
+        - { skill: data-analysis, level: 1 }
+    credentials:
+      - { credential: bachelor-accounting, requirement: COMMON }
+      - { credential: acca, requirement: PREFERRED }
+
+  - code: statutory-auditor
+    name_vi: Kiểm toán viên
+    name_en: Statutory Auditor
+    job_families: [accounting-finance]
+    description_vi: >-
+      Kiểm toán viên hành nghề, được ký báo cáo kiểm toán. Khác với trợ lý kiểm toán
+      (audit associate), vị trí không yêu cầu chứng chỉ kiểm toán viên.
+    aliases:
+      vi: [kiểm toán viên hành nghề, kiểm toán viên độc lập]
+      en: [licensed auditor, certified auditor, cpa auditor]
+    external_refs:
+      - { scheme: ISCO08, code: "2411", match: BROAD }
+    skills:
+      essential:
+        - { skill: financial-statement-audit, level: 4 }
+        - { skill: financial-reporting, level: 3 }
+        - { skill: vietnamese-accounting-standards, level: 3 }
+        - { skill: spreadsheet-excel, level: 3 }
+        - { skill: communication, level: 3 }
+      optional:
+        - { skill: ifrs, level: 3 }
+        - { skill: english, level: 3 }
+        - { skill: team-leadership, level: 3 }
+    credentials:
+      - credential: vietnam-cpa
+        requirement: LEGALLY_REQUIRED
+        note_vi: >-
+          Bắt buộc để ký báo cáo kiểm toán, theo Luật Kiểm toán độc lập. Cần thêm đăng ký hành nghề
+          kiểm toán. Không có đường tắt: lộ trình chỉ có thể giúp chuẩn bị cho kỳ thi.
+      - { credential: acca, requirement: PREFERRED }
+      - { credential: bachelor-accounting, requirement: COMMON }

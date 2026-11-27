@@ -1,0 +1,196 @@
+occupations:
+  - code: digital-marketing-specialist
+    name_vi: Chuyên viên Digital Marketing
+    name_en: Digital Marketing Specialist
+    job_families: [marketing]
+    description_vi: Triển khai đa kênh online (nội dung, mạng xã hội, quảng cáo, SEO) và báo cáo hiệu quả.
+    aliases:
+      vi: [nhân viên digital marketing, nhân viên marketing online, chuyên viên marketing online]
+      en: [digital marketing executive, online marketing specialist, digital marketer]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+      - { scheme: ONET, code: "13-1161.00", match: BROAD }
+    skills:
+      essential:
+        - { skill: marketing-fundamentals, level: 2 }
+        - { skill: content-writing, level: 2 }
+        - { skill: social-media-management, level: 2 }
+        - { skill: meta-ads, level: 2 }
+        - { skill: google-analytics, level: 2 }
+        - { skill: marketing-reporting, level: 2 }
+        - { skill: on-page-seo, level: 1 }
+      optional:
+        - { skill: google-ads, level: 2 }
+        - { skill: tiktok-ads, level: 1 }
+        - { skill: email-marketing, level: 1 }
+        - { skill: crm-marketing-tools, level: 1 }
+        - { skill: conversion-tracking, level: 1 }
+        - { skill: graphic-design-basic, level: 1 }
+        - { skill: spreadsheet-excel, level: 2 }
+        - { skill: english, level: 2 }
+    credentials:
+      - { credential: google-ads-search-certification, requirement: PREFERRED }
+      - { credential: google-analytics-certification, requirement: PREFERRED }
+      - { credential: meta-certified-digital-marketing-associate, requirement: PREFERRED }
+
+  - code: performance-marketing-specialist
+    name_vi: Chuyên viên Performance Marketing
+    name_en: Performance Marketing Specialist
+    job_families: [marketing]
+    description_vi: Chạy và tối ưu quảng cáo trả phí theo mục tiêu chuyển đổi, chịu trách nhiệm ngân sách và chỉ số CPA/ROAS.
+    aliases:
+      vi: [nhân viên chạy quảng cáo, chuyên viên quảng cáo, nhân viên ads, chuyên viên ads, media buyer]
+      en: [media buyer, paid media specialist, ads specialist, ppc specialist, performance marketer]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+    skills:
+      essential:
+        - { skill: paid-advertising, level: 3 }
+        - { skill: meta-ads, level: 3 }
+        - { skill: google-ads, level: 2 }
+        - { skill: conversion-tracking, level: 2 }
+        - { skill: marketing-reporting, level: 2 }
+        - { skill: ab-testing, level: 2 }
+        - { skill: marketing-budget-management, level: 2 }
+        - { skill: spreadsheet-excel, level: 2 }
+      optional:
+        - { skill: tiktok-ads, level: 2 }
+        - { skill: zalo-ads, level: 1 }
+        - { skill: marketplace-ads, level: 1 }
+        - { skill: google-analytics, level: 2 }
+        - { skill: looker-studio, level: 2 }
+        - { skill: copywriting, level: 1 }
+    credentials:
+      - { credential: meta-certified-media-buying-professional, requirement: PREFERRED }
+      - { credential: google-ads-search-certification, requirement: PREFERRED }
+
+  - code: seo-specialist
+    name_vi: Chuyên viên SEO
+    name_en: SEO Specialist
+    job_families: [marketing]
+    description_vi: Tăng lượng truy cập tự nhiên từ công cụ tìm kiếm thông qua tối ưu nội dung, kỹ thuật và liên kết.
+    aliases:
+      vi: [nhân viên seo, chuyên viên tối ưu website, seoer]
+      en: [seo executive, seo analyst, search marketing specialist]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+      - { scheme: ONET, code: "13-1161.01", match: CLOSE }
+    skills:
+      essential:
+        - { skill: seo, level: 3 }
+        - { skill: keyword-research, level: 3 }
+        - { skill: on-page-seo, level: 3 }
+        - { skill: technical-seo, level: 2 }
+        - { skill: google-search-console, level: 2 }
+        - { skill: google-analytics, level: 2 }
+        - { skill: content-writing, level: 2 }
+      optional:
+        - { skill: off-page-seo, level: 2 }
+        - { skill: marketing-reporting, level: 2 }
+        - { skill: looker-studio, level: 1 }
+        - { skill: english, level: 2 }
+
+  - code: content-marketing-specialist
+    name_vi: Chuyên viên Content Marketing
+    name_en: Content Marketing Specialist
+    job_families: [marketing]
+    description_vi: Lên kế hoạch và sản xuất nội dung cho các kênh của thương hiệu.
+    aliases:
+      vi: [nhân viên content, content writer, content creator, copywriter, biên tập viên nội dung]
+      en: [content executive, content writer, copywriter, content creator]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+    skills:
+      essential:
+        - { skill: content-writing, level: 3 }
+        - { skill: content-marketing, level: 2 }
+        - { skill: copywriting, level: 2 }
+        - { skill: social-media-management, level: 2 }
+        - { skill: marketing-fundamentals, level: 2 }
+      optional:
+        - { skill: short-video-production, level: 2 }
+        - { skill: graphic-design-basic, level: 2 }
+        - { skill: adobe-photoshop, level: 1 }
+        - { skill: on-page-seo, level: 1 }
+        - { skill: kol-koc-marketing, level: 1 }
+        - { skill: english, level: 2 }
+    credentials:
+      - { credential: hubspot-content-marketing-certification, requirement: PREFERRED }
+
+  - code: ecommerce-executive
+    name_vi: Chuyên viên Thương mại điện tử
+    name_en: E-commerce Executive
+    job_families: [marketing]
+    description_vi: Vận hành và tăng doanh số gian hàng trên các sàn thương mại điện tử và kênh bán hàng online.
+    aliases:
+      vi: [nhân viên thương mại điện tử, nhân viên vận hành sàn, nhân viên sàn tmđt, chuyên viên ecommerce]
+      en: [ecommerce specialist, marketplace executive, ecommerce operations executive]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+    skills:
+      essential:
+        - { skill: ecommerce-marketplace-ops, level: 3 }
+        - { skill: marketplace-ads, level: 2 }
+        - { skill: marketing-reporting, level: 2 }
+        - { skill: spreadsheet-excel, level: 2 }
+      optional:
+        - { skill: livestream-selling, level: 2 }
+        - { skill: kol-koc-marketing, level: 2 }
+        - { skill: short-video-production, level: 1 }
+        - { skill: tiktok-ads, level: 1 }
+        - { skill: graphic-design-basic, level: 1 }
+
+  - code: brand-executive
+    name_vi: Chuyên viên Thương hiệu
+    name_en: Brand Executive
+    job_families: [marketing]
+    description_vi: Triển khai kế hoạch xây dựng thương hiệu, phối hợp agency, theo dõi sức khoẻ thương hiệu.
+    aliases:
+      vi: [nhân viên thương hiệu, chuyên viên phát triển thương hiệu, brand executive, trade marketing]
+      en: [brand specialist, assistant brand manager, brand marketing executive]
+    external_refs:
+      - { scheme: ISCO08, code: "2431", match: BROAD }
+    skills:
+      essential:
+        - { skill: brand-management, level: 2 }
+        - { skill: marketing-fundamentals, level: 3 }
+        - { skill: market-research, level: 2 }
+        - { skill: marketing-planning, level: 2 }
+        - { skill: communication, level: 3 }
+        - { skill: presentation-skills, level: 2 }
+      optional:
+        - { skill: public-relations, level: 2 }
+        - { skill: event-planning, level: 2 }
+        - { skill: kol-koc-marketing, level: 2 }
+        - { skill: marketing-budget-management, level: 1 }
+        - { skill: english, level: 3 }
+    credentials:
+      - { credential: bachelor-marketing, requirement: COMMON }
+
+  - code: marketing-manager
+    name_vi: Trưởng phòng Marketing
+    name_en: Marketing Manager
+    job_families: [marketing]
+    description_vi: Xây dựng chiến lược, quản lý ngân sách và đội ngũ marketing, chịu trách nhiệm kết quả kinh doanh của mảng.
+    aliases:
+      vi: [quản lý marketing, giám đốc marketing, trưởng nhóm marketing, marketing lead]
+      en: [head of marketing, marketing lead, marketing director, cmo]
+    external_refs:
+      - { scheme: ISCO08, code: "1221", match: CLOSE }
+      - { scheme: ONET, code: "11-2021.00", match: EXACT }
+    skills:
+      essential:
+        - { skill: marketing-planning, level: 4 }
+        - { skill: marketing-budget-management, level: 3 }
+        - { skill: brand-management, level: 3 }
+        - { skill: digital-marketing, level: 3 }
+        - { skill: marketing-analytics, level: 3 }
+        - { skill: team-leadership, level: 3 }
+        - { skill: communication, level: 3 }
+        - { skill: presentation-skills, level: 3 }
+      optional:
+        - { skill: market-research, level: 3 }
+        - { skill: public-relations, level: 2 }
+        - { skill: english, level: 3 }
+    credentials:
+      - { credential: bachelor-marketing, requirement: COMMON }
