@@ -31,4 +31,9 @@ class OccupationRepositoryAdapter implements OccupationRepository {
     public List<Occupation> findByJobFamily(TaxonomyCode jobFamily) {
         return jpa.findByJobFamilyCode(jobFamily.value()).stream().map(mapper::toDomain).toList();
     }
+
+    @Override
+    public List<Occupation> findBySkill(TaxonomyCode skill) {
+        return jpa.findBySkillCode(skill.value()).stream().map(mapper::toDomain).toList();
+    }
 }

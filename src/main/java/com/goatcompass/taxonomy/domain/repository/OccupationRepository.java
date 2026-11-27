@@ -11,4 +11,6 @@ public interface OccupationRepository {
     List<Occupation> findByNormalizedAlias(String normalizedAlias);
 
     List<Occupation> findByJobFamily(TaxonomyCode jobFamily);
+
+    List<Occupation> findBySkill(TaxonomyCode skill);
 }
