@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-5.0.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1795767430351-17" author="HP">
+        <dropForeignKeyConstraint baseTableName="credential_skill" constraintName="fk_credential_skill_skill"/>
+
+        <dropIndex indexName="idx_occupation_job_family_one_primary" tableName="occupation_job_family"/>
+
+        <dropIndex indexName="idx_skill_embedding_hnsw" tableName="skill_embedding"/>
+
+        <dropUniqueConstraint constraintName="uk_external_ref_entity_scheme_code" tableName="external_ref"/>
+    </changeSet>
+    <changeSet id="1795767430351-9" author="HP">
+        <createSequence incrementBy="50" sequenceName="revinfo_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1795767430351-10" author="HP">
+        <createTable tableName="revchanges">
+            <column name="rev" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entityname" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1795767430351-11" author="HP">
+        <createTable tableName="revinfo">
+            <column name="rev" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_revinfo"/>
+            </column>
+            <column name="revtstmp" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1795767430351-12" author="HP">
+        <createIndex indexName="IX_pk_occupation_credential" tableName="occupation_credential" unique="true">
+            <column name="occupation_id"/>
+            <column name="credential_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="1795767430351-13" author="HP">
+        <createIndex indexName="IX_pk_occupation_job_family" tableName="occupation_job_family" unique="true">
+            <column name="occupation_id"/>
+            <column name="job_family_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="1795767430351-14" author="HP">
+        <createIndex indexName="IX_pk_skill_embedding" tableName="skill_embedding" unique="true">
+            <column name="skill_id"/>
+            <column name="model"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="1795767430351-15" author="HP">
+        <createIndex indexName="IX_pk_skill_relation" tableName="skill_relation" unique="true">
+            <column name="from_skill_id"/>
+            <column name="to_skill_id"/>
+            <column name="relation_type"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="1795767430351-16" author="HP">
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="revchanges"
+                                 constraintName="fk_revchanges_on_default_tracking_modified_entities_changelog"
+                                 referencedColumnNames="rev" referencedTableName="revinfo"/>
+    </changeSet>
+    <changeSet id="1795767430351-18" author="HP">
+        <dropPrimaryKey constraintName="pk_credential_skill" tableName="credential_skill"/>
+    </changeSet>
+    <changeSet id="1795767430351-19" author="HP">
+        <dropPrimaryKey constraintName="pk_occupation_alias" tableName="occupation_alias"/>
+    </changeSet>
+    <changeSet id="1795767430351-20" author="HP">
+        <dropPrimaryKey constraintName="pk_skill_alias" tableName="skill_alias"/>
+    </changeSet>
+    <changeSet id="1795767430351-1" author="HP">
+        <modifyDataType columnName="event_type" newDataType="VARCHAR" tableName="event_publication"/>
+    </changeSet>
+    <changeSet id="1795767430351-2" author="HP">
+        <modifyDataType columnName="event_type" newDataType="VARCHAR" tableName="event_publication_archive"/>
+    </changeSet>
+    <changeSet id="1795767430351-3" author="HP">
+        <modifyDataType columnName="listener_id" newDataType="VARCHAR" tableName="event_publication"/>
+    </changeSet>
+    <changeSet id="1795767430351-4" author="HP">
+        <modifyDataType columnName="listener_id" newDataType="VARCHAR" tableName="event_publication_archive"/>
+    </changeSet>
+    <changeSet id="1795767430351-5" author="HP">
+        <modifyDataType columnName="serialized_event" newDataType="VARCHAR" tableName="event_publication"/>
+    </changeSet>
+    <changeSet id="1795767430351-6" author="HP">
+        <modifyDataType columnName="serialized_event" newDataType="VARCHAR" tableName="event_publication_archive"/>
+    </changeSet>
+    <changeSet id="1795767430351-8" author="HP">
+        <addUniqueConstraint columnNames="scheme" constraintName="uk_external_ref_entity_scheme_code"
+                             tableName="external_ref"/>
+    </changeSet>
+
+</databaseChangeLog>
