@@ -27,4 +27,9 @@ class SkillRepositoryAdapter implements SkillRepository {
     public List<Skill> findByNormalizedAlias(String normalizedAlias) {
         return jpa.findByAliasNormalized(normalizedAlias).stream().map(mapper::toDomain).toList();
     }
+
+    @Override
+    public List<Skill> findAll() {
+        return jpa.findAll().stream().map(mapper::toDomain).toList();
+    }
 }

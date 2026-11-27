@@ -14,4 +14,7 @@ public interface OccupationJpaRepository extends JpaRepository<OccupationEntity,
 
     @Query("select distinct o from OccupationEntity o join o.jobFamilies f where f.jobFamily.code = :jobFamilyCode")
     List<OccupationEntity> findByJobFamilyCode(String jobFamilyCode);
+
+    @Query("select distinct o from OccupationEntity o join o.skills s where s.skill.code = :skillCode")
+    List<OccupationEntity> findBySkillCode(String skillCode);
 }

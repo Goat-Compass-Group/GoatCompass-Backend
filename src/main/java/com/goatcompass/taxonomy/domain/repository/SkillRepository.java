@@ -9,4 +9,6 @@ public interface SkillRepository {
     Optional<Skill> findByCode(TaxonomyCode code);
 
     List<Skill> findByNormalizedAlias(String normalizedAlias);
+
+    List<Skill> findAll();
 }
