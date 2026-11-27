@@ -1,0 +1,78 @@
+skills:
+  - code: financial-accounting
+    name_vi: Kế toán tài chính
+    name_en: Financial Accounting
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 24
+    description_vi: Ghi nhận nghiệp vụ, hạch toán, sổ sách, khoá sổ cuối kỳ.
+    prerequisites: [vietnamese-accounting-standards]
+    aliases:
+      vi: [hạch toán kế toán, nghiệp vụ kế toán, định khoản, ghi sổ kế toán]
+      en: [bookkeeping, general ledger, accounting]
+
+  - code: vietnamese-accounting-standards
+    name_vi: Chuẩn mực và chế độ kế toán Việt Nam (VAS)
+    name_en: Vietnamese Accounting Standards
+    kind: KNOWLEDGE
+    acquisition: EXTENDED
+    weeks_to_working: 12
+    aliases:
+      vi: [vas, chuẩn mực kế toán việt nam, chế độ kế toán, thông tư 200, thông tư 133]
+      en: [vietnam gaap]
+
+  - code: ifrs
+    name_vi: Chuẩn mực báo cáo tài chính quốc tế (IFRS)
+    name_en: IFRS
+    kind: KNOWLEDGE
+    acquisition: EXTENDED
+    weeks_to_working: 24
+    related:
+      - { skill: vietnamese-accounting-standards, weight: 0.4 }
+    aliases:
+      vi: [chuẩn mực quốc tế, vfrs]
+      en: [international financial reporting standards, ias]
+
+  - code: tax-accounting
+    name_vi: Kế toán thuế
+    name_en: Tax Accounting
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 16
+    description_vi: Kê khai, quyết toán thuế GTGT, TNDN, TNCN; hoá đơn điện tử.
+    prerequisites: [financial-accounting]
+    aliases:
+      vi: [kê khai thuế, quyết toán thuế, báo cáo thuế, thuế gtgt, thuế tndn, thuế tncn, hoá đơn điện tử]
+      en: [tax compliance, tax filing, vat]
+
+  - code: financial-reporting
+    name_vi: Lập báo cáo tài chính
+    name_en: Financial Reporting
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 16
+    prerequisites: [financial-accounting]
+    aliases:
+      vi: [lập bctc, báo cáo tài chính, bctc]
+      en: [financial statements preparation, financial statements]
+
+  - code: accounting-software
+    name_vi: Phần mềm kế toán
+    name_en: Accounting Software
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 2
+    aliases:
+      vi: [phần mềm misa, misa, fast accounting, phần mềm kế toán bravo]
+      en: [erp accounting module, sap fi, quickbooks]
+
+  - code: financial-statement-audit
+    name_vi: Kiểm toán báo cáo tài chính
+    name_en: Financial Statement Audit
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 48
+    prerequisites: [financial-reporting]
+    aliases:
+      vi: [kiểm toán bctc, kiểm toán độc lập, kiểm toán]
+      en: [external audit, statutory audit, audit]

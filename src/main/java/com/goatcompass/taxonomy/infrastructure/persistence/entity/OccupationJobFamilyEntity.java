@@ -18,6 +18,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "occupation_job_family",
@@ -28,6 +29,7 @@ public class OccupationJobFamilyEntity {
     @EmbeddedId
     private Id id;
     @Column(name = "is_primary", nullable = false)
+    @Setter
     private boolean primaryFamily;
 
     @MapsId("occupationId")

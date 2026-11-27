@@ -76,4 +76,9 @@ public class SkillEntity extends CodedEntity {
         this.status = Status.DEPRECATED;
         this.replacedBy = replacement;
     }
+
+    public void updateStatus(Status status, SkillEntity replacement) {
+        this.status = status;
+        this.replacedBy = status == Status.DEPRECATED ? replacement : null;
+    }
 }

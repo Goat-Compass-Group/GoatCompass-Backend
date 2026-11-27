@@ -19,6 +19,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "external_ref",
@@ -44,6 +45,7 @@ public class ExternalRefEntity extends BaseEntity {
     private String externalCode;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
+    @Setter
     private MatchType matchType;
 
     public ExternalRefEntity(

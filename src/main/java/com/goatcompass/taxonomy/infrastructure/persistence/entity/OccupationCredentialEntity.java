@@ -20,6 +20,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "occupation_credential")
@@ -29,9 +30,11 @@ public class OccupationCredentialEntity {
     @EmbeddedId
     private Id id;
     @Column(columnDefinition = "text")
+    @Setter
     private String noteVi;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
+    @Setter
     private CredentialRequirement requirement;
 
     @MapsId("occupationId")

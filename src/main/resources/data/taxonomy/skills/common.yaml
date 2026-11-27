@@ -1,0 +1,88 @@
+skills:
+  # --- Tin học văn phòng & dữ liệu -------------------------------------------
+  - code: office-computing
+    name_vi: Tin học văn phòng
+    name_en: Office Computing
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 3
+    description_vi: Dùng thành thạo bộ công cụ văn phòng (soạn thảo, bảng tính, trình chiếu).
+    aliases:
+      vi: [sử dụng máy tính văn phòng, word excel powerpoint]
+      en: [microsoft office, ms office, office suite, google workspace]
+
+  - code: spreadsheet-excel
+    name_vi: Excel / Google Sheets
+    name_en: Spreadsheets (Excel, Google Sheets)
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Bảng tính, hàm, pivot table, biểu đồ.
+    broader: [office-computing]
+    aliases:
+      vi: [excel, google sheets, google sheet, bảng tính, pivot, vlookup]
+      en: [microsoft excel, ms excel, spreadsheet, pivot table]
+
+  - code: data-analysis
+    name_vi: Phân tích dữ liệu
+    name_en: Data Analysis
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 12
+    description_vi: Làm sạch, tổng hợp và diễn giải dữ liệu để rút ra kết luận phục vụ ra quyết định.
+    prerequisites: [spreadsheet-excel]
+    aliases:
+      vi: [phân tích số liệu, xử lý số liệu, phân tích data]
+      en: [data analytics, analytics]
+
+  # --- Ngoại ngữ -------------------------------------------------------------
+  - code: english
+    name_vi: Tiếng Anh
+    name_en: English
+    kind: LANGUAGE
+    acquisition: EXTENDED
+    description_vi: >-
+      Mức quy đổi gần đúng theo CEFR: 1 ≈ A2, 2 ≈ B1, 3 ≈ B2, 4 ≈ C1 trở lên.
+    aliases:
+      vi: [anh văn, tiếng anh giao tiếp, ngoại ngữ tiếng anh]
+      en: [english communication, business english, ielts, toeic]
+
+  # --- Kỹ năng mềm -----------------------------------------------------------
+  - code: communication
+    name_vi: Giao tiếp
+    name_en: Communication
+    kind: SOFT
+    acquisition: EXTENDED
+    aliases:
+      vi: [kỹ năng giao tiếp, giao tiếp tốt, khả năng truyền đạt]
+      en: [communication skills, interpersonal skills]
+
+  - code: presentation-skills
+    name_vi: Thuyết trình
+    name_en: Presentation Skills
+    kind: SOFT
+    acquisition: EXTENDED
+    related:
+      - { skill: communication, weight: 0.4 }
+    aliases:
+      vi: [kỹ năng thuyết trình, trình bày, thuyết trình trước đám đông]
+      en: [presenting, public speaking]
+
+  - code: teamwork
+    name_vi: Làm việc nhóm
+    name_en: Teamwork
+    kind: SOFT
+    acquisition: EXTENDED
+    aliases:
+      vi: [kỹ năng làm việc nhóm, phối hợp nhóm]
+      en: [team player, collaboration]
+
+  - code: team-leadership
+    name_vi: Quản lý và dẫn dắt đội nhóm
+    name_en: Team Leadership
+    kind: SOFT
+    acquisition: EXTENDED
+    prerequisites: [teamwork]
+    aliases:
+      vi: [quản lý đội nhóm, quản lý nhân sự trong nhóm, lãnh đạo nhóm, leader]
+      en: [people management, team management, leadership]

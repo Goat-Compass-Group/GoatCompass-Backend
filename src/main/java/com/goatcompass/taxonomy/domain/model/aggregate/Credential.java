@@ -18,7 +18,7 @@ import lombok.Singular;
 @Builder
 public record Credential(
         TaxonomyCode code, String nameVi, String nameEn, CredentialKind kind, String issuer,
-        String url, Integer prepWeeks, Integer validityMonths, String noteVi, Status status,
+        String url, Integer prepWeeks, Integer validityMonths, String noteVi, Status status, TaxonomyCode replacedBy,
         @Singular List<EvidencedSkill> skills
 ) {
 

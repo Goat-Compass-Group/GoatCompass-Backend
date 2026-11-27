@@ -69,4 +69,9 @@ public class CredentialEntity extends CodedEntity {
         this.status = Status.DEPRECATED;
         this.replacedBy = replacement;
     }
+
+    public void updateStatus(Status status, CredentialEntity replacement) {
+        this.status = status;
+        this.replacedBy = status == Status.DEPRECATED ? replacement : null;
+    }
 }

@@ -1,0 +1,461 @@
+skills:
+  # --- Nền tảng ---------------------------------------------------------------
+  - code: marketing-fundamentals
+    name_vi: Kiến thức marketing căn bản
+    name_en: Marketing Fundamentals
+    kind: KNOWLEDGE
+    acquisition: QUICK
+    weeks_to_working: 3
+    description_vi: 4P/7P, STP, chân dung khách hàng, phễu marketing, hành trình khách hàng.
+    aliases:
+      vi: [nguyên lý marketing, marketing căn bản, kiến thức marketing, 4p, phễu marketing]
+      en: [principles of marketing, marketing basics, marketing funnel, marketing mix]
+
+  - code: digital-marketing
+    name_vi: Digital marketing (tổng quan)
+    name_en: Digital Marketing
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 12
+    description_vi: >-
+      Kỹ năng bao trùm: phối hợp các kênh online (quảng cáo, SEO, nội dung, mạng xã hội, email) để đạt mục tiêu kinh doanh.
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [marketing online, tiếp thị số, tiếp thị trực tuyến, digital mkt]
+      en: [online marketing, internet marketing]
+
+  # --- Quảng cáo trả phí --------------------------------------------------------
+  - code: paid-advertising
+    name_vi: Quảng cáo trả phí (performance)
+    name_en: Paid Advertising
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    description_vi: Lên chiến dịch, nhắm mục tiêu, tối ưu ngân sách và chuyển đổi trên các nền tảng quảng cáo.
+    broader: [digital-marketing]
+    aliases:
+      vi: [chạy quảng cáo, chạy ads, quảng cáo online, quảng cáo trực tuyến, quảng cáo trả tiền]
+      en: [performance marketing, paid media, ppc, paid ads, media buying]
+
+  - code: meta-ads
+    name_vi: Quảng cáo Meta (Facebook, Instagram)
+    name_en: Meta Ads
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    broader: [paid-advertising]
+    related:
+      - { skill: google-ads, weight: 0.5 }
+      - { skill: tiktok-ads, weight: 0.6 }
+      - { skill: zalo-ads, weight: 0.5 }
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [chạy ads fb, chạy quảng cáo facebook, quảng cáo facebook, ads facebook, fb ads, quảng cáo instagram]
+      en: [facebook ads, facebook advertising, meta ads manager, facebook ads manager, instagram ads]
+
+  - code: google-ads
+    name_vi: Quảng cáo Google Ads
+    name_en: Google Ads
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Quảng cáo tìm kiếm, hiển thị, YouTube, Performance Max.
+    broader: [paid-advertising]
+    related:
+      - { skill: keyword-research, weight: 0.3 }
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [quảng cáo google, chạy google ads, quảng cáo tìm kiếm, quảng cáo youtube]
+      en: [google adwords, adwords, sem, search ads, google search ads, youtube ads, performance max]
+
+  - code: tiktok-ads
+    name_vi: Quảng cáo TikTok
+    name_en: TikTok Ads
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    broader: [paid-advertising]
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [chạy ads tiktok]
+      en: [tiktok ads manager, tiktok advertising]
+
+  - code: zalo-ads
+    name_vi: Quảng cáo Zalo
+    name_en: Zalo Ads
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 2
+    broader: [paid-advertising]
+    aliases:
+      vi: [chạy ads zalo, zalo oa]
+      en: [zalo advertising]
+
+  - code: marketplace-ads
+    name_vi: Quảng cáo trên sàn thương mại điện tử
+    name_en: Marketplace Ads
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 2
+    description_vi: Quảng cáo nội sàn như Shopee Ads, Lazada Sponsored Solutions, quảng cáo TikTok Shop.
+    broader: [paid-advertising]
+    prerequisites: [ecommerce-marketplace-ops]
+    aliases:
+      vi: [quảng cáo shopee, chạy ads sàn, quảng cáo sàn, quảng cáo lazada]
+      en: [shopee ads, lazada sponsored, marketplace advertising, retail media]
+
+  - code: conversion-tracking
+    name_vi: Đo lường chuyển đổi (pixel, tag)
+    name_en: Conversion Tracking
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 2
+    description_vi: Cài pixel, Conversions API, Google Tag Manager, UTM để đo kết quả quảng cáo.
+    broader: [marketing-analytics]
+    aliases:
+      vi: [gắn pixel, cài pixel, tracking chuyển đổi, đo lường chuyển đổi, gắn utm]
+      en: [google tag manager, gtm, meta pixel, facebook pixel, conversions api, utm tracking]
+
+  # --- SEO -------------------------------------------------------------------
+  - code: seo
+    name_vi: SEO (tối ưu công cụ tìm kiếm)
+    name_en: Search Engine Optimization
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 10
+    broader: [digital-marketing]
+    aliases:
+      vi: [tối ưu công cụ tìm kiếm, làm seo, seo website, seo google]
+      en: [seo, search engine optimisation]
+
+  - code: keyword-research
+    name_vi: Nghiên cứu từ khoá
+    name_en: Keyword Research
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 2
+    broader: [seo]
+    aliases:
+      vi: [research từ khoá, phân tích từ khoá, bộ từ khoá]
+      en: [keyword analysis, keyword planning]
+
+  - code: on-page-seo
+    name_vi: SEO onpage
+    name_en: On-page SEO
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    description_vi: Tối ưu nội dung, tiêu đề, thẻ meta, liên kết nội bộ cho từng trang.
+    broader: [seo]
+    related:
+      - { skill: content-writing, weight: 0.3 }
+    prerequisites: [keyword-research]
+    aliases:
+      vi: [seo on page, viết bài chuẩn seo, content chuẩn seo]
+      en: [onpage seo, seo copywriting, seo content]
+
+  - code: technical-seo
+    name_vi: SEO kỹ thuật
+    name_en: Technical SEO
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    description_vi: Tốc độ trang, index, sitemap, dữ liệu cấu trúc, Core Web Vitals.
+    broader: [seo]
+    prerequisites: [on-page-seo]
+    aliases:
+      vi: [seo technical, audit seo]
+      en: [seo audit, core web vitals, structured data, schema markup]
+
+  - code: off-page-seo
+    name_vi: SEO offpage
+    name_en: Off-page SEO
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 6
+    broader: [seo]
+    prerequisites: [on-page-seo]
+    aliases:
+      vi: [seo off page, xây dựng backlink, đi backlink]
+      en: [link building, backlink building]
+
+  - code: google-search-console
+    name_vi: Google Search Console
+    name_en: Google Search Console
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 1
+    broader: [seo]
+    aliases:
+      vi: [search console]
+      en: [gsc, webmaster tools]
+
+  # --- Nội dung & mạng xã hội -------------------------------------------------
+  - code: content-marketing
+    name_vi: Content marketing
+    name_en: Content Marketing
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    description_vi: Lên chiến lược và kế hoạch nội dung theo mục tiêu, đo hiệu quả nội dung.
+    broader: [digital-marketing]
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [tiếp thị nội dung, chiến lược nội dung, content plan, lên kế hoạch nội dung]
+      en: [content strategy, content planning, editorial calendar]
+
+  - code: content-writing
+    name_vi: Viết content
+    name_en: Content Writing
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Viết bài blog, bài mạng xã hội, bài PR theo định hướng thương hiệu.
+    broader: [content-marketing]
+    aliases:
+      vi: [viết bài, viết nội dung, content writer, sáng tạo nội dung, biên tập nội dung]
+      en: [content creation, blog writing, writing]
+
+  - code: copywriting
+    name_vi: Copywriting (viết quảng cáo)
+    name_en: Copywriting
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    description_vi: Viết thông điệp, tiêu đề, kịch bản quảng cáo nhằm thuyết phục và tạo chuyển đổi.
+    broader: [content-marketing]
+    related:
+      - { skill: content-writing, weight: 0.5 }
+    prerequisites: [content-writing]
+    aliases:
+      vi: [viết quảng cáo, viết content quảng cáo, viết kịch bản quảng cáo, copy quảng cáo]
+      en: [ad copywriting, advertising copy, copy writing]
+
+  - code: social-media-management
+    name_vi: Quản lý kênh mạng xã hội
+    name_en: Social Media Management
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Vận hành fanpage, kênh TikTok, Instagram; lên lịch đăng, tương tác, theo dõi chỉ số.
+    broader: [digital-marketing]
+    aliases:
+      vi: [quản trị fanpage, quản lý fanpage, chăm sóc fanpage, vận hành fanpage, social media, quản lý mạng xã hội]
+      en: [social media marketing, smm, community management]
+
+  - code: short-video-production
+    name_vi: Sản xuất video ngắn
+    name_en: Short-form Video Production
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Lên ý tưởng, quay và dựng video ngắn cho TikTok, Reels, Shorts.
+    broader: [content-marketing]
+    aliases:
+      vi: [dựng video, edit video, quay dựng video, làm video tiktok]
+      en: [video editing, short-form video, reels, tiktok video, capcut]
+
+  - code: graphic-design-basic
+    name_vi: Thiết kế hình ảnh cơ bản
+    name_en: Basic Graphic Design
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 2
+    description_vi: Tự làm banner, ảnh bài đăng bằng Canva hoặc công cụ tương tự.
+    aliases:
+      vi: [thiết kế canva, thiết kế banner, thiết kế ảnh, làm ảnh quảng cáo]
+      en: [canva, graphic design]
+
+  - code: adobe-photoshop
+    name_vi: Photoshop
+    name_en: Adobe Photoshop
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 4
+    broader: [graphic-design-basic]
+    aliases:
+      vi: [ps, chỉnh sửa ảnh]
+      en: [photo editing]
+
+  - code: kol-koc-marketing
+    name_vi: Influencer marketing (KOL, KOC)
+    name_en: Influencer Marketing
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Tìm, đàm phán, quản lý và đo hiệu quả hợp tác với KOL, KOC, influencer.
+    broader: [digital-marketing]
+    aliases:
+      vi: [booking kol, booking koc, làm việc với kol, kol marketing, koc, seeding]
+      en: [kol management, creator marketing]
+
+  - code: livestream-selling
+    name_vi: Bán hàng livestream
+    name_en: Livestream Selling
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    description_vi: Lên kịch bản, vận hành và tối ưu phiên livestream bán hàng.
+    related:
+      - { skill: ecommerce-marketplace-ops, weight: 0.4 }
+    aliases:
+      vi: [livestream bán hàng, vận hành livestream, live bán hàng, host livestream]
+      en: [live commerce, livestream commerce, live shopping]
+
+  - code: email-marketing
+    name_vi: Email marketing
+    name_en: Email Marketing
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    broader: [digital-marketing]
+    aliases:
+      vi: [tiếp thị qua email, gửi email marketing, chăm sóc khách hàng qua email]
+      en: [email campaigns, newsletter, mailchimp, email automation]
+
+  - code: crm-marketing-tools
+    name_vi: Công cụ CRM và marketing automation
+    name_en: CRM & Marketing Automation Tools
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 3
+    related:
+      - { skill: email-marketing, weight: 0.4 }
+    aliases:
+      vi: [phần mềm crm, quản lý khách hàng crm, tự động hoá marketing]
+      en: [crm, hubspot, salesforce, marketing automation]
+
+  # --- Thương mại điện tử -------------------------------------------------------
+  - code: ecommerce-marketplace-ops
+    name_vi: Vận hành gian hàng sàn thương mại điện tử
+    name_en: E-commerce Marketplace Operations
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 4
+    description_vi: Đăng sản phẩm, tối ưu listing, chương trình khuyến mãi, xử lý đơn trên Shopee, Lazada, TikTok Shop, Tiki.
+    aliases:
+      vi: [vận hành shopee, vận hành sàn, quản lý gian hàng, bán hàng trên sàn, tiktok shop, sàn tmđt, sàn thương mại điện tử]
+      en: [marketplace management, shopee, lazada, ecommerce operations]
+
+  # --- Đo lường & dữ liệu -----------------------------------------------------
+  - code: marketing-analytics
+    name_vi: Phân tích dữ liệu marketing
+    name_en: Marketing Analytics
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    description_vi: Đo lường, phân tích hiệu quả kênh và chiến dịch, đưa ra đề xuất tối ưu.
+    broader: [digital-marketing, data-analysis]
+    aliases:
+      vi: [phân tích số liệu marketing, đo lường marketing, phân tích hiệu quả chiến dịch]
+      en: [marketing measurement, campaign analytics, marketing data analysis]
+
+  - code: google-analytics
+    name_vi: Google Analytics (GA4)
+    name_en: Google Analytics
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 3
+    broader: [marketing-analytics]
+    aliases:
+      vi: [google analytic, phân tích website]
+      en: [ga4, ga, google analytics 4, web analytics]
+
+  - code: marketing-reporting
+    name_vi: Báo cáo dữ liệu marketing
+    name_en: Marketing Reporting
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 3
+    description_vi: Tổng hợp số liệu từ nhiều kênh thành báo cáo, dashboard định kỳ.
+    broader: [marketing-analytics]
+    prerequisites: [spreadsheet-excel]
+    aliases:
+      vi: [làm báo cáo marketing, báo cáo hiệu quả quảng cáo, làm dashboard, báo cáo số liệu, báo cáo dữ liệu]
+      en: [marketing reports, marketing dashboard, campaign reporting]
+
+  - code: looker-studio
+    name_vi: Looker Studio
+    name_en: Looker Studio
+    kind: TOOL
+    acquisition: QUICK
+    weeks_to_working: 2
+    broader: [marketing-reporting]
+    aliases:
+      en: [google data studio, data studio]
+
+  - code: ab-testing
+    name_vi: A/B testing
+    name_en: A/B Testing
+    kind: TECHNICAL
+    acquisition: QUICK
+    weeks_to_working: 2
+    broader: [marketing-analytics]
+    aliases:
+      vi: [thử nghiệm a/b, test a/b, test mẫu quảng cáo]
+      en: [ab testing, split testing, experimentation]
+
+  # --- Chiến lược, thương hiệu, truyền thông ------------------------------------
+  - code: market-research
+    name_vi: Nghiên cứu thị trường
+    name_en: Market Research
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 6
+    description_vi: Nghiên cứu khách hàng, đối thủ, xu hướng; khảo sát; tìm insight.
+    aliases:
+      vi: [nghiên cứu khách hàng, phân tích đối thủ, nghiên cứu insight, khảo sát thị trường]
+      en: [consumer research, competitor analysis, consumer insight]
+
+  - code: marketing-planning
+    name_vi: Lập kế hoạch marketing
+    name_en: Marketing Planning
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 12
+    prerequisites: [marketing-fundamentals, market-research]
+    aliases:
+      vi: [lên kế hoạch marketing, xây dựng chiến lược marketing, kế hoạch truyền thông]
+      en: [marketing strategy, go-to-market, gtm strategy, marketing plan]
+
+  - code: marketing-budget-management
+    name_vi: Quản lý ngân sách marketing
+    name_en: Marketing Budget Management
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 8
+    aliases:
+      vi: [quản lý ngân sách, phân bổ ngân sách quảng cáo, kiểm soát chi phí marketing]
+      en: [budget management, media budget, budget allocation]
+
+  - code: brand-management
+    name_vi: Quản lý thương hiệu
+    name_en: Brand Management
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 16
+    description_vi: Định vị, nhận diện, chăm sóc sức khoẻ thương hiệu và các chiến dịch xây dựng thương hiệu.
+    prerequisites: [marketing-fundamentals]
+    aliases:
+      vi: [xây dựng thương hiệu, phát triển thương hiệu, định vị thương hiệu]
+      en: [branding, brand building, brand strategy, brand positioning]
+
+  - code: public-relations
+    name_vi: Quan hệ công chúng (PR)
+    name_en: Public Relations
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 12
+    aliases:
+      vi: [pr, truyền thông, quan hệ báo chí, xử lý khủng hoảng truyền thông, viết thông cáo báo chí]
+      en: [media relations, press release, crisis communication]
+
+  - code: event-planning
+    name_vi: Tổ chức sự kiện
+    name_en: Event Planning
+    kind: TECHNICAL
+    acquisition: EXTENDED
+    weeks_to_working: 6
+    aliases:
+      vi: [tổ chức event, lên kế hoạch sự kiện, sự kiện, activation]
+      en: [event management, events, brand activation]
