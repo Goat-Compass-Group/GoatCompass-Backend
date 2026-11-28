@@ -10,7 +10,11 @@ import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.mail.MailException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.MissingRequestCookieException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
@@ -36,9 +40,23 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     ResponseEntity<BaseResponse<Object>> validation(MethodArgumentNotValidException exception) {
-        Object message = exception.getBindingResult().getFieldErrors().stream()
-                .map(DefaultMessageSourceResolvable::getDefaultMessage).toList();
+        String message = String.join("; ", exception.getBindingResult().getFieldErrors().stream()
+                .map(DefaultMessageSourceResolvable::getDefaultMessage).toList());
         return error(HttpStatus.BAD_REQUEST, message, "Dữ liệu không hợp lệ");
+    }
+
+    @ExceptionHandler({
+            MissingServletRequestParameterException.class, MissingRequestCookieException.class,
+            HttpMessageNotReadableException.class
+    })
+    ResponseEntity<BaseResponse<Object>> badRequest(Exception exception) {
+        return error(HttpStatus.BAD_REQUEST, "Yêu cầu thiếu dữ liệu hoặc sai định dạng", "Dữ liệu không hợp lệ");
+    }
+
+    @ExceptionHandler(MailException.class)
+    ResponseEntity<BaseResponse<Object>> mail(MailException exception) {
+        log.error("Không gửi được email: {}", exception.getMessage());
+        return error(HttpStatus.SERVICE_UNAVAILABLE, "Không gửi được email, vui lòng thử lại sau.", "Lỗi gửi email");
     }
 
     @ExceptionHandler(NoResourceFoundException.class)

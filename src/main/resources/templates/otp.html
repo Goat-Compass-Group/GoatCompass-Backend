@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mã xác thực GoatCompass</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f6f5; font-family: Arial, Helvetica, sans-serif; color: #1f2a26;">
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f4f6f5; padding: 32px 16px;">
+    <tr>
+        <td align="center">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+                   style="max-width: 520px; background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #dfe7e3;">
+                <tr>
+                    <td style="background-color: #007A55; padding: 20px 28px;">
+                        <span style="font-size: 20px; font-weight: bold; color: #ffffff;">GoatCompass</span>
+                        <span style="font-size: 13px; color: #E8F7F1; padding-left: 8px;">Trợ lý nghề nghiệp AI</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 28px;">
+                        <p style="margin: 0 0 12px; font-size: 16px;">
+                            Xin chào <strong th:text="${fullName}">bạn</strong>,
+                        </p>
+                        <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.5;">
+                            Nhập mã dưới đây để xác thực email của bạn trên GoatCompass.
+                        </p>
+                        <div style="background-color: #E8F7F1; border-radius: 10px; padding: 18px; text-align: center;">
+                            <span th:text="${verificationCode}"
+                                  style="font-size: 32px; font-weight: bold; letter-spacing: 8px; color: #004D38;">000000</span>
+                        </div>
+                        <p style="margin: 20px 0 0; font-size: 14px; color: #55635d; line-height: 1.5;">
+                            Mã có hiệu lực trong <strong th:text="${validityMinutes}">15</strong> phút.
+                            Không chia sẻ mã này với bất kỳ ai. Nếu bạn không yêu cầu, hãy bỏ qua email này.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top: 3px solid #C9A227; padding: 16px 28px; font-size: 12px; color: #7a8a83;">
+                        Email tự động từ GoatCompass, vui lòng không trả lời.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

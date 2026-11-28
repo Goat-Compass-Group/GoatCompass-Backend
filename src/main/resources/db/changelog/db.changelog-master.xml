@@ -10,4 +10,5 @@
     <include file="/db/changelog/schema/27-11-2026/add-modulith-event-publication.xml"/>
     <include file="/db/changelog/schema/27-11-2026/change-schema-taxonomy.xml"/>
     <include file="/db/changelog/schema/27-11-2026/restore-taxonomy-constraints.xml"/>
+    <include file="/db/changelog/schema/28-11-2026/init-identity-schema.xml"/>
 </databaseChangeLog>
