@@ -1,6 +1,7 @@
 package com.goatcompass.shared.infrastructure.exception;
 
 import com.goatcompass.shared.application.dto.response.base.BaseResponse;
+import com.goatcompass.shared.application.exception.ExternalServiceException;
 import com.goatcompass.shared.application.exception.NotFoundException;
 import com.goatcompass.shared.application.exception.ServiceException;
 import com.goatcompass.shared.application.exception.UnauthenticatedException;
@@ -11,7 +12,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.mail.MailException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.MissingRequestCookieException;
@@ -53,10 +53,10 @@ public class GlobalExceptionHandler {
         return error(HttpStatus.BAD_REQUEST, "Yêu cầu thiếu dữ liệu hoặc sai định dạng", "Dữ liệu không hợp lệ");
     }
 
-    @ExceptionHandler(MailException.class)
-    ResponseEntity<BaseResponse<Object>> mail(MailException exception) {
-        log.error("Không gửi được email: {}", exception.getMessage());
-        return error(HttpStatus.SERVICE_UNAVAILABLE, "Không gửi được email, vui lòng thử lại sau.", "Lỗi gửi email");
+    @ExceptionHandler(ExternalServiceException.class)
+    ResponseEntity<BaseResponse<Object>> externalService(ExternalServiceException exception) {
+        log.error("Lỗi dịch vụ bên ngoài: {}", exception.getMessage());
+        return error(HttpStatus.SERVICE_UNAVAILABLE, exception.getUserMessage(), "Dịch vụ tạm thời không khả dụng");
     }
 
     @ExceptionHandler(NoResourceFoundException.class)
